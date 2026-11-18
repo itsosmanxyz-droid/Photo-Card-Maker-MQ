@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.osman.photocardmaker"
+    android:versionCode="2"
+    android:versionName="1.1.0">
+
+    <!-- Google Mobile Ads SDK 25.x needs minSdk 24 or higher. -->
+    
+
+    <!--
+        INTERNET and ACCESS_NETWORK_STATE are used ONLY by the Google Mobile Ads
+        SDK (ads and the consent form). Your photos, projects and templates never
+        leave the device.
+        WRITE_EXTERNAL_STORAGE: saving the exported image on Android 9 and older.
+    -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+
+    <application
+        android:name=".PhotoCardApp"
+        android:allowBackup="false"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <!-- AdMob app ID of "Photo card maker MQ". Missing = the app crashes on start. -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-9414513035654232~5010303925" />
+
+        <activity
+            android:name=".ui.MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.ModuleHostActivity"
+            android:label="@string/app_name" />
+
+        <activity
+            android:name=".ui.TemplateGalleryActivity"
+            android:label="@string/gallery_title" />
+
+        <activity
+            android:name=".ui.EditorActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.LogoManagerActivity"
+            android:label="@string/logo_title" />
+
+        <activity
+            android:name=".ui.SettingsActivity"
+            android:label="@string/settings_title" />
+
+    </application>
+
+</manifest>

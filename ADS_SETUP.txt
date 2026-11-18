@@ -1,0 +1,43 @@
+ADMOB SETUP - Photo Card Maker MQ
+=================================
+AdMob app ID : ca-app-pub-9414513035654232~5010303925   (already in AndroidManifest.xml)
+Ad units     : App open, Banner, Interstitial, Native, Rewarded, Rewarded interstitial
+               (all written in src/com/osman/photocardmaker/ads/AdConfig.java)
+
+1) ADD THE LIBRARIES (the only step you must do in your build tool)
+   com.google.android.gms:play-services-ads:25.5.0
+   com.google.android.ump:user-messaging-platform:4.0.0
+   Requirements of that SDK version: minSdk 24+, compileSdk 35+ (minSdk is already 24 here).
+   Gradle:   dependencies {
+                 implementation 'com.google.android.gms:play-services-ads:25.5.0'
+                 implementation 'com.google.android.ump:user-messaging-platform:4.0.0'
+             }
+   If your tool cannot use that version, copy ads_stub/AdsManager.java over
+   src/com/osman/photocardmaker/ads/AdsManager.java and the app builds without ads.
+
+2) TEST FIRST, THEN GO LIVE
+   AdConfig.TEST_MODE = true  -> Google's test ads (safe, use this while developing).
+   AdConfig.TEST_MODE = false -> your real ads. Set it ONLY for the build you publish.
+   Never click your own live ads (AdMob policy, can suspend the account).
+
+3) WHERE THE ADS APPEAR
+   App open ........ returning to the app (after 3 launches, 4 min apart, not after picker/share)
+   Banner .......... bottom of Template lists, My projects, Custom templates, Logo manager
+   Native .......... home screen, between the two sections (marked "Ad")
+   Interstitial .... after every 2nd export, when the "Saved" dialog is closed (90 s apart)
+   Rewarded ........ Settings > "Watch a video: no ads for 1 hour"
+   Rewarded inter. . Export at Full HD (3x): optional video, free HD (2x) always available
+                     (turn off with AdConfig.GATE_FULL_HD = false)
+
+4) IN YOUR ADMOB ACCOUNT
+   - Privacy & messaging: create and publish a consent message (GDPR / US states) for this app.
+   - Link the app to its store listing when published; real ads need a published app.
+   - Add a privacy policy link to the store listing and fill the Data safety form
+     (the ads SDK collects device and advertising data).
+
+5) ADMOB POLICY REMINDERS
+   - Do not click your own ads or ask users to click.
+   - Use test ads while testing.
+   - Keep ads away from buttons (no accidental clicks); native ads must be labelled "Ad".
+   - Rewarded interstitial needs an intro screen with an option to skip (done in the editor).
+   - Do not use the app for children under 13 without child-directed settings.

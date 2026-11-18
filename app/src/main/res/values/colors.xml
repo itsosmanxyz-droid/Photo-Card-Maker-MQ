@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg">#F3F4F8</color>
+    <color name="primary">#C62828</color>
+    <color name="primary_dark">#8E0000</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="text_main">#1B1B1F</color>
+    <color name="text_sub">#6B6F7B</color>
+    <color name="badge_ready">#2E7D32</color>
+    <color name="badge_soon">#9E9E9E</color>
+    <color name="accent_blue">#1565C0</color>
+    <color name="accent_orange">#EF6C00</color>
+    <color name="accent_purple">#6A1B9A</color>
+    <color name="accent_teal">#00695C</color>
+    <color name="accent_pink">#AD1457</color>
+    <color name="accent_indigo">#283593</color>
+    <color name="accent_brown">#4E342E</color>
+    <color name="accent_green">#2E7D32</color>
+</resources>
