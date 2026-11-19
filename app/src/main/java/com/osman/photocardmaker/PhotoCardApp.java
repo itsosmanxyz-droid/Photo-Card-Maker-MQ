@@ -2,14 +2,16 @@ package com.osman.photocardmaker;
 
 import android.app.Application;
 
-import com.osman.photocardmaker.ads.AdsManager;
+import androidx.appcompat.app.AppCompatDelegate;
 
-/** Application class: prepares the ads manager (no network call happens here). */
+import com.osman.photocardmaker.templates.TemplateRepository;
+import com.osman.photocardmaker.utils.Prefs;
+
 public class PhotoCardApp extends Application {
-
     @Override
     public void onCreate() {
         super.onCreate();
-        AdsManager.init(this);
+        AppCompatDelegate.setDefaultNightMode(Prefs.getTheme(this));
+        TemplateRepository.get().init(this);
     }
 }

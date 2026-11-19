@@ -1,22 +1,75 @@
-apply plugin: 'com.android.application'
+plugins {
+    id 'com.android.application'
+}
+
+def q = { Object s -> "\"${s}\"".toString() }
+def TEST_APP = 'ca-app-pub-3940256099942544~3347511713'
+def TEST_BANNER = 'ca-app-pub-3940256099942544/9214589741'
+def TEST_INTER = 'ca-app-pub-3940256099942544/1033173712'
+def TEST_REWARD = 'ca-app-pub-3940256099942544/5224354917'
+def prop = { String k, String d -> (project.findProperty(k) ?: d).toString() }
 
 android {
-    compileSdkVersion 33
+    namespace 'com.osman.photocardmaker'
+    compileSdk 34
+
     defaultConfig {
-        applicationId "com.osman.photocardmaker"
-        minSdkVersion 21
-        targetSdkVersion 28
-        versionCode 2
-        versionName "1.1.0"
-        multiDexEnabled true
+        applicationId 'com.osman.photocardmaker'
+        minSdk 24
+        targetSdk 34
+        versionCode 1          // increase for every release
+        versionName '1.0.0'
+        // === CHANGE THESE ===
+        buildConfigField 'String', 'REMOTE_TEMPLATES_URL', q('https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/photo-card-templates/main/templates.json')
+        buildConfigField 'String', 'PRIVACY_URL', q('https://example.com/privacy')
+        buildConfigField 'String', 'SUPPORT_EMAIL', q('support@example.com')
     }
+
+    signingConfigs {
+        release {
+            if (System.getenv('KEYSTORE_PATH')) {
+                storeFile file(System.getenv('KEYSTORE_PATH'))
+                storePassword System.getenv('KEYSTORE_PASSWORD')
+                keyAlias System.getenv('KEY_ALIAS')
+                keyPassword System.getenv('KEY_PASSWORD')
+            }
+        }
+    }
+
+    buildTypes {
+        debug {
+            manifestPlaceholders = [admobAppId: TEST_APP]
+            buildConfigField 'String', 'ADMOB_BANNER', q(TEST_BANNER)
+            buildConfigField 'String', 'ADMOB_INTERSTITIAL', q(TEST_INTER)
+            buildConfigField 'String', 'ADMOB_REWARDED', q(TEST_REWARD)
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            manifestPlaceholders = [admobAppId: prop('ADMOB_APP_ID_RELEASE', TEST_APP)]
+            buildConfigField 'String', 'ADMOB_BANNER', q(prop('ADMOB_BANNER_RELEASE', TEST_BANNER))
+            buildConfigField 'String', 'ADMOB_INTERSTITIAL', q(prop('ADMOB_INTERSTITIAL_RELEASE', TEST_INTER))
+            buildConfigField 'String', 'ADMOB_REWARDED', q(prop('ADMOB_REWARDED_RELEASE', TEST_REWARD))
+            if (System.getenv('KEYSTORE_PATH')) {
+                signingConfig signingConfigs.release
+            }
+        }
+    }
+
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    buildFeatures {
+        buildConfig true
     }
 }
 
 dependencies {
-    implementation 'com.google.android.gms:play-services-ads:22.6.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'androidx.recyclerview:recyclerview:1.3.2'
+    implementation 'com.google.android.gms:play-services-ads:23.2.0'
     implementation 'com.google.android.ump:user-messaging-platform:2.2.0'
 }
