@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <color name="bg">#121318</color>
-    <color name="surface">#1E1F26</color>
-    <color name="text">#ECECF1</color>
-    <color name="text2">#A0A4B0</color>
-    <color name="preview_bg">#2A2B33</color>
-    <color name="stroke">#3A3C46</color>
-</resources>
