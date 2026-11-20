@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Photo Card Maker MQ</string>
+    <string name="dashboard_subtitle">Create, edit and export photo cards offline</string>
+    <string name="settings">Settings</string>
+    <string name="back">Back</string>
+    <string name="status_ready">Ready</string>
+    <string name="status_coming">Coming in step %1$d</string>
+    <string name="host_registered">This module is registered in the app and will be implemented in step %1$d of the build plan.</string>
+
+    <string name="settings_title">Settings</string>
+    <string name="settings_export_size">Export quality</string>
+    <string name="settings_scale_1">Standard (1x)</string>
+    <string name="settings_scale_2">HD (2x)</string>
+    <string name="settings_scale_3">Full HD (3x)</string>
+    <string name="settings_export_format">Export format</string>
+    <string name="settings_format_png">PNG (lossless)</string>
+    <string name="settings_format_jpg">JPG (smaller file)</string>
+    <string name="settings_storage">Local storage folder</string>
+    <string name="settings_offline_note">Your photos and cards stay on this device. Internet is used only to show ads (Google AdMob).</string>
+
+    <string name="mod_gallery_t">Template Gallery</string>
+    <string name="mod_gallery_d">12 original news-style templates</string>
+    <string name="mod_news_t">News Photo Card</string>
+    <string name="mod_news_d">Professional news cards</string>
+    <string name="mod_breaking_t">Breaking News</string>
+    <string name="mod_breaking_d">Urgent alert style cards</string>
+    <string name="mod_custom_t">Custom Photo Card</string>
+    <string name="mod_custom_d">Design from scratch</string>
+    <string name="mod_frame_t">Profile Frame</string>
+    <string name="mod_frame_d">Frames for profile photos</string>
+    <string name="mod_birthday_t">Birthday Card</string>
+    <string name="mod_birthday_d">Birthday wishes with photo</string>
+    <string name="mod_poster_t">Poster Maker</string>
+    <string name="mod_poster_d">Posters and flyers</string>
+    <string name="mod_social_t">Social Media Post</string>
+    <string name="mod_social_d">Square and story sizes</string>
+    <string name="mod_youtube_t">YouTube Thumbnail</string>
+    <string name="mod_youtube_d">1280x720 thumbnails</string>
+    <string name="mod_logo_t">Logo Manager</string>
+    <string name="mod_logo_d">Upload and manage logos</string>
+    <string name="mod_template_t">Custom Templates</string>
+    <string name="mod_template_d">Save your own templates</string>
+    <string name="mod_projects_t">My Projects</string>
+    <string name="mod_projects_d">Saved designs on device</string>
+
+    <string name="sample_frame">আপনার নাম</string>
+    <string name="sample_birthday">শুভ জন্মদিন</string>
+    <string name="sample_birthday_sub">আপনার জীবন সুখ ও শান্তিতে ভরে উঠুক</string>
+    <string name="sample_poster_title">আপনার পোস্টারের শিরোনাম</string>
+    <string name="sample_poster_sub">বিস্তারিত তথ্য এখানে লিখুন</string>
+    <string name="sample_social">আজকের বার্তা</string>
+    <string name="sample_youtube">আপনার ভিডিওর শিরোনাম</string>
+    <string name="sample_youtube_label">নতুন ভিডিও</string>
+
+    <string name="ed_save">Save</string>
+    <string name="ed_save_tpl">Save as template</string>
+    <string name="ed_export">Export</string>
+    <string name="btn_new">+ New</string>
+    <string name="logo_title">Logo Manager</string>
+    <string name="logo_add">+ Add logo</string>
+    <string name="logo_hint">Tap a logo to use it. Long-press to delete.</string>
+    <string name="list_hint_default">Tap a template to open it in the editor.</string>
+    <string name="list_hint_templates">Tap to use a template. Long-press to delete.</string>
+    <string name="list_hint_templates_empty">No custom templates yet. Open any template, edit it, then tap Save as template.</string>
+    <string name="list_hint_projects">Tap to continue editing. Long-press to delete.</string>
+    <string name="list_hint_projects_empty">No saved projects yet. Open any template and tap Save.</string>
+    <string name="delete_confirm">Delete this item permanently?</string>
+    <string name="settings_credit">Photo Card Maker MQ 1.0 - Developer: MD. OSMAN GONI</string>
+
+    <string name="home_offline">FAST  |  PRIVATE</string>
+    <string name="home_hero_tag">START HERE</string>
+    <string name="home_hero_title">Design a photo card in minutes</string>
+    <string name="home_hero_sub">Start from a blank canvas or pick one of the ready templates. Everything stays on your phone.</string>
+    <string name="home_hero_blank">Blank card</string>
+    <string name="home_hero_templates">My projects</string>
+    <string name="home_sec_library">Template library</string>
+    <string name="home_sec_space">Your space</string>
+    <string name="coming_soon">Coming Soon</string>
+    <string name="coming_soon_sub">Templates for this category will be added soon.</string>
+    <string name="coming_soon_tile">More templates soon</string>
+    <string name="n_templates">%1$d templates</string>
+    <string name="home_footer">Photo Card Maker MQ  |  Developer: MD. OSMAN GONI</string>
+
+    <string name="gallery_title">Template Gallery</string>
+    <string name="gallery_hint">Tap a template to preview it. Editing arrives in the next step.</string>
+    <string name="gallery_close">Close</string>
+
+    <string name="sample_label_news">সর্বশেষ সংবাদ</string>
+    <string name="sample_label_breaking">ব্রেকিং নিউজ</string>
+    <string name="sample_label_special">বিশেষ প্রতিবেদন</string>
+    <string name="sample_label_today">আজকের খবর</string>
+    <string name="sample_label_live">সরাসরি</string>
+    <string name="sample_headline">এখানে আপনার প্রধান শিরোনাম লিখুন</string>
+    <string name="sample_sub">বিস্তারিত তথ্য ও তারিখ এখানে লিখুন</string>
+    <!-- Ads -->
+    <string name="ad_ri_title">Unlock HD export</string>
+    <string name="ad_ri_message">Watch a short video to unlock HD (3x) export for 24 hours. You can skip this.</string>
+    <string name="ad_watch">Watch video</string>
+    <string name="ad_no_thanks">No thanks</string>
+    <string name="ad_hd_title">HD export (3x)</string>
+    <string name="ad_hd_message">Watch a short video to unlock HD (3x) export for 24 hours.</string>
+    <string name="ad_not_ready">Video is not ready yet. Check your internet and try again in a moment.</string>
+    <string name="ad_hd_unlocked">HD export unlocked for 24 hours</string>
+    <string name="ad_hd_not_earned">Watch the whole video to unlock HD export</string>
+</resources>

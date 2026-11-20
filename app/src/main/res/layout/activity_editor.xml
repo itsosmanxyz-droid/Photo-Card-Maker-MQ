@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_header"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btnBack"
+            style="@style/ToolbarButton"
+            android:text="@string/back" />
+
+        <TextView
+            android:id="@+id/btnSave"
+            style="@style/ToolbarButton"
+            android:text="@string/ed_save" />
+
+        <TextView
+            android:id="@+id/btnSaveTpl"
+            style="@style/ToolbarButton"
+            android:text="@string/ed_save_tpl" />
+
+        <TextView
+            android:id="@+id/btnExport"
+            style="@style/ToolbarButton"
+            android:text="@string/ed_export" />
+    </LinearLayout>
+
+    <com.osman.photocardmaker.ui.CardPreviewView
+        android:id="@+id/preview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#D5D8DE" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/surface"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/tabBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp" />
+    </HorizontalScrollView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/bg">
+
+        <LinearLayout
+            android:id="@+id/panel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp" />
+    </ScrollView>
+</LinearLayout>
